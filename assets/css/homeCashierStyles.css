@@ -1,0 +1,67 @@
+@import url('https://fonts.cdnfonts.com/css/inika');
+@import url('https://fonts.cdnfonts.com/css/inknut-antiqua');
+.menu-container{
+    height: 470px;
+    background-color: rgba(255, 255, 255, 0.17);
+    margin-top: 50px;
+    border-radius: 30px;
+    overflow:visible;
+}
+.navbar-custom {
+    background-color: transparent; /* Change this to the desired color */
+}
+
+.navbar-custom .navbar-brand{
+    font-family:'Inknut Antiqua', sans-serif; 
+    font-size: 25px;
+}
+.navbar-custom .navbar-nav .nav-border{
+    border-left: 2px solid rgba(255, 255, 255, 0.078);
+    border-bottom:2px solid rgba(255, 255, 255, 0.078) ;
+}
+
+/* .navbar-custom .navbar-brand, */
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 13px; /* Change this to the desired text color */
+    text-align: center;
+   
+}
+
+.navbar-custom .navbar-nav .nav-item.dropdown:hover .nav-link,
+.navbar-custom .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    background-color: #2980b9; /* Change this to the desired dropdown background color on hover */
+}
+
+.navbar-custom .navbar-nav .nav-item.dropdown:hover .nav-link {
+    color: #fff; /* Change this to the desired dropdown text color on hover */
+}
+@media(max-width:768px){
+    .cashier-pic{
+        height: 80px !important;
+    }
+}
+
+@media(max-width:440px){
+    .hidden-xs {
+        display: none !important;
+    }
+}
+.cashier-pic{
+    border-radius: 50%;
+    height: 90px;
+    width:90px;
+    border: 2px solid white;
+    margin-left: 25px;
+    overflow: hidden;
+    background-image: url('../img/profile.png');
+    background-size: 100px 100px;
+    background-position: center;
+}
+
+.small-text{
+    font-size: 15px;
+    font-family: 'Inika', sans-serif;
+    color: white;                                  
+}
+

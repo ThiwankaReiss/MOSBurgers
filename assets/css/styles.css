@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/inknut-antiqua');
+@import url('https://fonts.cdnfonts.com/css/inika');
 *{
     padding: 0;
     margin: 0;
@@ -5,12 +7,13 @@
     list-style: none;
     box-sizing: border-box;
 }
+
+/*----Page Background----------*/
 #backGround{
     width: 100%;
     
-    
 }
-.login-container{
+.buger-background{
      background-image: url("../img/backGround.png");
      height: 100vh;
      background-repeat: no-repeat;
@@ -21,4 +24,88 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+}
+/*---------------------------*/
+
+.login-container{
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.17);
+    margin-top: 100px;
+    border-radius: 30px;
+    overflow:visible;
+}
+
+
+
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .circle.top-left {
+    background-image:linear-gradient(to top left,rgb(179,57,236),rgba(211, 211, 211, 0));
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    left: -50px;
+  }
+
+  .circle.bottom-right {
+    background-image:linear-gradient(to bottom right,rgb(179,57,236),rgba(211, 211, 211, 0));
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    right: -50px;
+  }
+
+.login-components{
+    overflow: auto;
+}
+.txt-login{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Inknut Antiqua', sans-serif;
+}
+.text-label{
+    color: white;
+}
+
+.text-field-container {
+    position: relative;
+    margin: 3px;
+}
+
+.text-field {
+    width: 100%;
+    /* padding: 10px; */
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.text-field:focus {
+    border-bottom-color: #63ff40;
+}
+.btn-login{
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width :100%;
+    font-size:20px ;
+}
+.btn-login:hover{
+    background-color:  #63ff40;
+    color: red;
+}
+.register-link{
+    color: white;
+}
+.register-link:hover{
+    color:  #63ff40;
 }
