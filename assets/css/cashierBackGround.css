@@ -1,5 +1,31 @@
-@import url('https://fonts.cdnfonts.com/css/inika');
 @import url('https://fonts.cdnfonts.com/css/inknut-antiqua');
+@import url('https://fonts.cdnfonts.com/css/inika');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*----Page Background----------*/
+#backGround{
+    width: 100%;
+    
+}
+.buger-background{
+     background-image: url("../img/backGround.png");
+     height: 100vh;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+.page-background{
+    background-color: rgba(33,30,39,255);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*---------------------------*/
+/*-------Nav Bar-------*/
 .menu-container{
     height: 470px;
     background-color: rgba(255, 255, 255, 0.17);
@@ -19,6 +45,10 @@
     border-left: 2px solid rgba(255, 255, 255, 0.078);
     border-bottom:2px solid rgba(255, 255, 255, 0.078) ;
 }
+.navbar-custom .navbar-nav .nav-border-right{
+    border-right: 2px solid rgba(255, 255, 255, 0.078);
+}
+
 
 /* .navbar-custom .navbar-brand, */
 .navbar-custom .navbar-nav .nav-link {
@@ -36,57 +66,9 @@
 .navbar-custom .navbar-nav .nav-item.dropdown:hover .nav-link {
     color: #fff; /* Change this to the desired dropdown text color on hover */
 }
-@media(max-width:768px){
-    .cashier-pic{
-        height: 80px !important;
-    }
-}
+/*---------------------------*/
 
-@media(max-width:440px){
-    .hidden-xs {
-        display: none !important;
-    }
-}
-@media(min-width:440px){
-    .hidden-lg {
-        display: none !important;
-    }
-}
-.cashier-pic{
-    border-radius: 50%;
-    height: 85px;
-    width:70px;
-    border: 2px solid white;
-    margin-left: 25px;
-    overflow: hidden;
-    background-image: url('../img/profile.png');
-    background-size: 90px 90px;
-    background-position: center;
-    margin-bottom: 10px;
-}
-
-.small-text{
-    font-size: 15px;
-    font-family: 'Inika', sans-serif;
-    color: white;                                  
-}
-.description-container1{
-    background-color: rgba(255, 255, 255, 0.17);
-    overflow: auto;
-    height: 110px;
-    padding-left: 15px;
-    padding-top: 3px;
-    border-radius: 25px;
-}
-.description-container2{
-    background-color: rgba(255, 255, 255, 0.17);
-    overflow: auto;
-    height: 180px;
-    padding-left: 15px;
-    padding-top: 3px;
-    border-radius: 25px;
-    margin-top: 5px;
-}
+/*-------Scroll bar---------*/
 
 .scrollbar-1::-webkit-scrollbar {
     width: 10px;
@@ -117,28 +99,54 @@
     background: transparent;
     margin-top: 15px;
 }
-.btn-change{
-    border-radius: 25px;
+/*---------------------------*/
+.small-text{
+    font-size: 15px;
+    font-family: 'Inika', sans-serif;
+    color: white;                                  
+}
+/*--------Text Field------*/
+.text-field-container {
+    position: relative;
+    margin: 3px;
+}
+
+.text-field {
+    width: 100%;
+    /* padding: 10px; */
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.text-field:focus {
+    border-bottom-color: #63ff40;
+}
+/*--------Btn------*/
+.btn-background{
+    border-radius: 30px ;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin-top: 70%;
-    width :100%;
+    padding-bottom: 3px ;
+    padding-top: 3px ;
+    width: 100%;
     font-size:15px ;
     background-image: linear-gradient(rgb(61,150,255),transparent);
     border: 1px solid black;
 }
-@media(max-width :768px){
-    .btn-change{
-        margin-top: 2px; 
-    }
-    .menu-container{
-        height: 510px;
-    }
-}
-.btn-change:hover{
+
+.btn-background:hover{
     background-color:  #63ff40;
     color: red;
 }
 
+/*--------link------*/
+.link{
+    color: white;
+}
+.link:hover{
+    color:  #63ff40;
+}

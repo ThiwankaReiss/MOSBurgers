@@ -23,7 +23,6 @@
     background-color: rgba(33,30,39,255);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
 }
 /*---------------------------*/
 
@@ -37,26 +36,26 @@
 
 
 
-  .circle {
+.circle {
     position: absolute;
     border-radius: 50%;
-  }
+}
 
-  .circle.top-left {
+.circle.top-left {
     background-image:linear-gradient(to top left,rgb(179,57,236),rgba(211, 211, 211, 0));
     width: 150px;
     height: 150px;
     top: -50px;
     left: -50px;
-  }
+}
 
-  .circle.bottom-right {
+.circle.bottom-right {
     background-image:linear-gradient(to bottom right,rgb(179,57,236),rgba(211, 211, 211, 0));
     width: 100px;
     height: 100px;
     bottom: -50px;
     right: -50px;
-  }
+}
 
 .login-components{
     overflow: auto;

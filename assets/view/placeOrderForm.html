@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
-        <title>Cashier Register Page</title>
-        <link rel="stylesheet" href="../css/homeCashierStyles.css">
-        <link rel="stylesheet" href="../css/styles.css">
+        <title>Place Order Page</title>
+        <link rel="stylesheet" href="../css/placeOderStyles.css">
+        <link rel="stylesheet" href="../css/cashierBackGround.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
@@ -26,10 +25,10 @@
                                         </button>
                                         <div class="collapse navbar-collapse" id="navbarNav">
                                             <ul class="navbar-nav ml-auto">
-                                                <li class="nav-item active">
+                                                <li class="nav-item nav-border nav-border-right">
                                                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                                 </li>
-                                                <li class="nav-item nav-border">
+                                                <li class="nav-item active">
                                                     <a class="nav-link" href="#">Place Order</a>
                                                 </li>
                                                 <li class="nav-item nav-border">
@@ -46,39 +45,33 @@
                                     </nav>
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-8 hidden-lg"></div>
-                                            <div class="col-4 cashier-pic hidden-lg"></div>
-                                            <div class="col-2 cashier-pic hidden-xs"></div>
-                                            <div class="col-9 small-text">Cashier ID : EOOI</div>
-                                            <div class="col-lg-7 col-md-7 col-sm-12">
-                                                <div class="container">
-                                                    <div  class="row small-text description-container1 scrollbar-1">
-                                                        <p>
-                                                            <span style="text-decoration: underline;">Description</span>
-                                                            <br>
-                                                            Hi  I’m “Test name”. I ‘m  a well experienced employee at Mos Burger.
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                            <div class="search-container col-lg-5 col-md-6 col-sm-6 ">
+                                                <input type="text" id="search-bar" oninput="showSuggestions()" placeholder="Search..." >
+                                                <div id="suggestions-container"></div>
                                             </div>
-                                            <div class="col-lg-5 col-md-5 hidden-xs"></div>
-                                            <div class="col-lg-7 col-md-7 col-sm-12">
-                                                <div class="container">
-                                                    <div  class="row small-text description-container2 scrollbar-1">
-                                                        <p>
-                                                            <span style="text-decoration: underline;">Profile</span><br>
-                                                            User Name : Test Name<br>
-                                                            Age  : test Age<br>
-                                                            Gender  : male<br>
-                                                            Experience  : 5 yrs<br>
-                                                            Email  : textName@gmail.com<br>
-                                                            Contact  : 07xxxxxxxxxx
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                            <div class="drop-down col-lg-1 col-md-1 col-sm-1">
+                                                <select type="button" onclick="showALlSuggestions()"></select>
                                             </div>
-                                            <div class="col-lg-5 col-md-5 col-sm-12">
-                                                <button type="button" class="btn-change">Change</button>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <button type="button" class="btn-background">New Customer</button>
+                                            </div>
+                                            <div class="col-lg-2 col-md-1 col-sm-1"></div>
+                                            <div class="cool-lg-6 col-md-6 col-sm-12 description-container scrollbar-1">
+                                                <div class="container">
+                                                    <div class="row ">
+                                                        <div class="small-text col-12">
+                                                            <p>Cashier ID           : EOOI</p>
+                                                            <p>Name                   : test-name</p>
+                                                            <p>Customer ID        : c001 </p>
+                                                            <p>Status                   : Loyal </p>
+                                                            <p>Contact                 : 07xxxxxx </p>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-4"></div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-8">
+                                                            <button type="button" class="btn-background">Next</button>
+                                                        </div>
+                                                    </div>
+                                                </div> 
                                             </div>
                                         </div>
                                     </div>  
@@ -92,11 +85,11 @@
                 </div>
             </div>
         </div>
-        <script src="../js/homeCashierScript.js"></script>
+        
+        <script src="../js/placeOrderScript.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
     </body>
 </html>
