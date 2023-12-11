@@ -1,0 +1,136 @@
+*{
+    margin: 0px;
+}
+.container-1{
+    height: 470px;
+    background-color: rgba(255, 255, 255, 0.17);
+    margin-top: 50px;
+    border-radius: 30px;
+    overflow:auto;
+}
+
+.search-container {
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#search-bar {
+    color: white;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    /* width: 100px; */
+    background-color: #ffffff29; /* Adjust background color here */
+}
+
+#suggestions-container {
+    color: white;
+    position: relative;
+    /* width: 200px; */
+    margin: 0;
+    width:100% ;
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color:  #ffffff29; /* Adjust background color here */
+}
+
+.suggestion-item {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+::placeholder {
+    /* Set the desired color */
+    color:white; /* Replace with your preferred color code */
+  }
+.drop-down{
+    margin-left: 0px;
+    margin-top: 3px;
+    color:transparent;
+}
+
+.text-label{
+    font-size: 12px;
+    color: white;
+}
+
+.text-label-1{
+    font-size: 10px;
+    color: white;
+}
+
+.text-field-container {
+    position: relative;
+    margin: 3px;
+}
+
+.text-field {
+    width: 100%;
+    /* padding: 10px; */
+    font-size: 10px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.text-field:focus {
+    border-bottom-color: #63ff40;
+}
+.description-container1{
+    background-color: rgba(255, 255, 255, 0.17);
+    overflow: auto;
+    padding-left: 15px;
+    padding-top: 3px;
+    border-radius: 25px;
+    margin: 2px;
+}
+
+.btn-background-1{
+    border-radius: 30px ;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1px ;
+    padding-top: 1px ;
+    width: 100%;
+    font-size:12px ;
+    background-image: linear-gradient(rgb(61,150,255),transparent);
+    border: 1px solid black;
+}
+.btn-background-1:hover{
+    background-color:  #63ff40;
+    color: red;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.676);
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: white;
+}
+  
+th {
+    background-color: #08bd4770;
+    font-size: 12px;
+}
+td{
+    font-size: 10px;
+}
+.tbl-container{
+    overflow-x: auto;
+}

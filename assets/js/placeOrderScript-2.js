@@ -1,5 +1,5 @@
 // Sample array of search suggestions
-const suggestionsArray = ["JavaScript", "HTML", "CSS", "React", "Node.js", "Python", "Java", "C++", "OpenAI", "ChatGPT"];
+const suggestionsArray = ["Burger1", "Burger2", "Burger3", "Taco", "Node.js", "Python", "Java", "C++", "OpenAI", "ChatGPT"];
 var num=0;
 
 function showSuggestions() {
@@ -75,6 +75,16 @@ function openPage(){
         
      // Open the new HTML file in the same window
      window.location.href = newHTMLFilePath;
+
+
+}
+
+function openPlaceOrder3(){
+    // Specify the path to the new HTML file
+    var newHTMLFilePath = '../view/placeOrderForm-3.html';
+       
+    // Open the new HTML file in the same window
+    window.location.href = newHTMLFilePath;
 
 
 }

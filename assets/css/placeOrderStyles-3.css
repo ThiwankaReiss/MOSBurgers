@@ -1,0 +1,44 @@
+@import url('https://fonts.cdnfonts.com/css/island-moments');
+.bill-container{
+    background-color: white;
+    overflow: auto;
+    padding-left: 15px;
+    padding-top: 3px;
+    border-radius: 25px;
+    margin: 2px;
+    height:300px;
+}
+
+.bill-heading{
+    font-family: 'Island Moments', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+th, td {
+    
+    text-align: left;
+    padding: 8px;
+    color: black;
+}
+  
+th {
+    background-color:white;
+    font-size: 12px;
+}
+td{
+    font-size: 10px;
+}
+.tbl-container{
+    overflow-x: auto;
+}
+
+#order-id{
+    text-align: right;
+    margin-right: 30px;
+}

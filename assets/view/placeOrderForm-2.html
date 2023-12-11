@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Place Order Page</title>
+        <link rel="stylesheet" href="../css/placeOrderStyles-2.css">
+        <link rel="stylesheet" href="../css/cashierBackGround.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="page-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1 d-sm-block"></div>
+                    <div class="col-lg-10 col-sm-12 buger-background">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-1 col-sm-1"></div>
+                                
+                                <div class="menu-container col-lg-8 col-md-10 col-sm-10">
+                                    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+                                        <a class="navbar-brand" href="#">Cashier</a>
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNav">
+                                            <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item nav-border nav-border-right">
+                                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                                </li>
+                                                <li class="nav-item active">
+                                                    <a class="nav-link" href="#">Place Order</a>
+                                                </li>
+                                                <li class="nav-item nav-border">
+                                                    <a class="nav-link" href="#">New Customer</a>
+                                                </li>
+                                                <li class="nav-item nav-border">
+                                                    <a class="nav-link" href="#">Notifications</a>
+                                                </li>
+                                                <li class="nav-item nav-border">
+                                                    <a class="nav-link" href="#">Order History</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                    <div class="container" >
+                                        <div class="row">
+
+                                            <div class="col-12 text-label">Order ID : KOOI</div>
+
+                                            <div class="col-6 text-label"> Customer </div>
+                                            <div class="col-6 text-label" style="text-align: right;">Cashier ID : EOOI</div>
+
+                                            <div class="col-lg-8 col-md-8 col-sm-12 text-label" >
+                                                <div class="container text-label">
+                                                    <div class="row description-container1 scrollbar-1">
+                                                        <div class="col-lg-7 col-md-7 col-sm-12">
+                                                                07xxxxxx -c001-name
+                                                        </div>
+                                                        <div class="col-lg-5 col-md-5 col-sm-12">
+                                                            <button type="button" class="btn-background-1">Change</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4"></div>
+
+                                            <div class="search-container col-lg-4 col-md-6 col-sm-6">
+                                                <input type="text" id="search-bar" oninput="showSuggestions()" placeholder="Search Item..." >
+                                                <div id="suggestions-container"></div>
+                                            </div>
+                                            <div class="drop-down col-lg-1 col-md-1 col-sm-1">
+                                                <select type="button" onclick="showALlSuggestions()"></select>
+                                            </div>
+                                            <div class="col-lg-2 col-md-1 col-sm-1">
+                                                <div class="text-label">Enter Quantity</div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-1 col-sm-1 text-field-container">
+                                                <input type="text" class="text-field">
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                                <button type="button" class="btn-background">Add</button>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-4 col-sm-12">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-label">Item Name</div>
+                                                        </div>
+                                                        <div class="col-l2 text-field-container">
+                                                            <input type="text" class="text-field">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-12">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-label-1">Code</div>
+                                                        </div>
+                                                        <div class="col-l2 text-field-container">
+                                                            <input type="text" class="text-field">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-4 col-sm-12">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-label-1">Unit Price</div>
+                                                        </div>
+                                                        <div class="col-l2 text-field-container">
+                                                            <input type="text" class="text-field">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-4 col-sm-12">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-label-1">Amount</div>
+                                                        </div>
+                                                        <div class="col-l2 text-field-container">
+                                                            <input type="text" class="text-field">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-1 col-md-4 col-sm-12">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-label-1">Discount</div>
+                                                        </div>
+                                                        <div class="col-l2 text-field-container">
+                                                            <input type="text" class="text-field">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12"></div>
+                                            <div class="tbl-container scrollbar-1 col-12" >
+                                                <table >
+                                                    <tr >
+                                                        <th>
+                                                            Code
+                                                        </th>
+                                                        <th>
+                                                            Name
+                                                        </th>
+                                                        <th>
+                                                            Unit Price
+                                                        </th>
+                                                        <th>
+                                                            Qty
+                                                        </th>
+                                                        <th>
+                                                            Discount
+                                                        </th>
+                                                        <th>
+                                                            Amount
+                                                        </th>
+                                                        <th>
+                                                            Delete
+                                                        </th>
+                                                        <th>
+                                                            Update
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="tbl-row">
+                                                        <td>
+                                                            B001
+                                                        </td>
+                                                        <td>
+                                                            Chichen burger
+                                                        </td>
+                                                        <td>
+                                                            1000
+                                                        </td>
+                                                        <td>
+                                                            3
+                                                        </td>
+                                                        <td>
+                                                            4%
+                                                        </td>
+                                                        <td>
+                                                            3000
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn-background-1">Delete</button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn-background-1">Update</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tbl-row">
+                                                        <td>
+                                                            B002
+                                                        </td>
+                                                        <td>
+                                                            Beef Burger
+                                                        </td>
+                                                        <td>
+                                                            1000
+                                                        </td>
+                                                        <td>
+                                                            4
+                                                        </td>
+                                                        <td>
+                                                            5%
+                                                        </td>
+                                                        <td>
+                                                            4000
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn-background-1">Delete</button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="btn-background-1">Update</button>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-12"></div>
+                                            <div class="col-lg-7 col-md-7 col-sm-12 text-label" style="text-align: right;">
+                                                Loyalty Discount : xxx
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-12 text-label" >
+                                                Total : 2xxx
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-sm-12" >
+                                                <button type="button" class="btn-background-1" onclick="openPlaceOrder3()">Place Order</button>
+                                            </div>
+                                        </div>
+
+                                    </div> 
+
+                                </div>
+                                <div class="col-lg-2 col-md-1 col-sm-1"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-1 d-sm-block"></div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="../js/placeOrderScript-2.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

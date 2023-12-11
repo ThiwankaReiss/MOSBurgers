@@ -15,7 +15,7 @@
 }
 .buger-background{
      background-image: url("../img/backGround.png");
-     height: 100vh;
+     min-height: 100vh;
      background-repeat: no-repeat;
      background-position: center;
 }
@@ -23,11 +23,12 @@
     background-color: rgba(33,30,39,255);
     background-repeat: no-repeat;
     background-size: cover;
+    min-height:101vh;
 }
 /*---------------------------*/
 /*-------Nav Bar-------*/
 .menu-container{
-    height: 470px;
+    min-height: 470px;
     background-color: rgba(255, 255, 255, 0.17);
     margin-top: 50px;
     border-radius: 30px;
