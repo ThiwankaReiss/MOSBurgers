@@ -14,7 +14,7 @@
     
 }
 .buger-background{
-     background-image: url("../img/backGround.png");
+     background-image: url("../../img/backGround.png");
      min-height: 100vh;
      background-repeat: no-repeat;
      background-position: center;
@@ -34,11 +34,12 @@
     border-radius: 30px;
     overflow:visible;
 }
-.navbar-custom {
+.navbar-custom {   
     background-color: transparent; /* Change this to the desired color */
 }
 
 .navbar-custom .navbar-brand{
+    color: #fff;
     font-family:'Inknut Antiqua', sans-serif; 
     font-size: 25px;
 }
@@ -61,11 +62,20 @@
 
 .navbar-custom .navbar-nav .nav-item.dropdown:hover .nav-link,
 .navbar-custom .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-    background-color: #2980b9; /* Change this to the desired dropdown background color on hover */
+    background-color: #0000008b; /* Change this to the desired dropdown background color on hover */
+    color: #fff; 
 }
 
 .navbar-custom .navbar-nav .nav-item.dropdown:hover .nav-link {
     color: #fff; /* Change this to the desired dropdown text color on hover */
+    background-color: #0000008b;
+}
+
+
+.navbar-custom .navbar-nav .nav-item.dropdown:hover .nav-link,
+.navbar-custom .navbar-nav .nav-item.dropdown:hover .dropdown-menu .dropdown-item{
+    background-color: #0000008b; /* Change this to the desired dropdown background color on hover */
+    color: #fff; 
 }
 /*---------------------------*/
 
