@@ -84,14 +84,46 @@
                                     </div>
                                     <div class="col-lg-2 col-md-2"></div>
                                     <div class="col-lg-1 col-md-1"></div>
-                                    <div class="container col-lg-10 col-md-10 col-sm-12 description-container1">
+                                    <div class="container col-12 scrollbar-1" style="overflow: auto;">
                                         <div class="row">
-                                            <div class="col-12">
-                                                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                                            <div class="container col-lg-10 col-md-10 col-sm-12 description-container1 scrollbar-1">
+                                                <div class="row">
+                                                    <div class="col-12"><p id="chart-topic"></p></div>
+                                                    <div class="col-12 "> 
+                                                        <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div> 
-
+                                    </div>
+                                    <div class="container col-12">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-12">
+                                                <button type="button" class="btn-background" onclick="qtyChart()">Quantity Chart</button>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-12">
+                                                <button type="button" class="btn-background" onclick="amountChart()">Amount Chart</button>
+                                            </div> 
+                                            <div class="col-lg-4 col-md-4 col-12">
+                                                <button type="button" class="btn-background" onclick="amountChart()">Prdeict</button>
+                                            </div> 
+                                            <div class="col-12" >
+                                                <div class="container col-12">
+                                                    <div class="row" id="predict-container">
+                                                        
+                                                            <input type="radio" name="group1" value="qty"> 
+                                                            <p class="p-tag">Prdeict By Qty</p>
+                                                            <input type="radio" name="group1" value="amount"> 
+                                                            <p class="p-tag">Prdeict By Amount</p>
+                                                        
+                                                        <button type="button" class="btn-background" onclick="get()">Prdeict</button>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                                 <div class="col-lg-2 col-md-1 col-sm-1"></div>
                             </div>

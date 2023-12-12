@@ -6,4 +6,26 @@
     padding-top: 3px;
     border-radius: 25px;
     margin-top: 20px;
+    min-width: 400px;
+}
+#chart-topic{
+    text-align: center;
+    color: blue;
+}
+
+.p-tag{
+    margin-bottom: 0px;
+    margin-right: 20px;
+    color: white;
+}
+
+#predict-container{
+    background-color: rgba(255, 255, 255, 0.17);
+    overflow: auto;
+   
+    padding-left: 15px;
+    padding-top: 3px;
+    border-radius: 25px;
+    margin-top: 20px;
+    min-width: 400px;
 }
