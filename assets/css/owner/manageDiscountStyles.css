@@ -1,0 +1,41 @@
+.description-container1{
+    background-color: rgba(255, 255, 255, 0.17);
+    overflow: auto;
+    height: 130px;
+    padding-left: 15px;
+    padding-top: 3px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+.radio-label{
+    color: white;
+    font-size: 13px;
+}
+.text-field-1 {
+    width: 100%;
+    /* padding: 10px; */
+    font-size: 13px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s;
+    color: white;
+}
+.text-field-1:focus {
+    border-bottom-color: #63ff40;
+}
+
+.smaller-text{
+    padding-top: 7px;
+    font-size: 11px;
+    font-family: 'Inika', sans-serif;
+    color: white;                                  
+}
+
+@media(min-width:767.9px){
+    .hidden-lg {
+        display: none !important;
+    }
+
+}

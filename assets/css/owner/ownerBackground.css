@@ -116,6 +116,12 @@
     font-family: 'Inika', sans-serif;
     color: white;                                  
 }
+
+.smaller-text{
+    font-size: 11px;
+    font-family: 'Inika', sans-serif;
+    color: white;                                  
+}
 /*--------Text Field------*/
 .text-field-container {
     position: relative;
