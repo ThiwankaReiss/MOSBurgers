@@ -1,4 +1,5 @@
 function qtyChart(){
+    document.getElementById('predict-container').innerHTML=``
     const xValues = [50,60,70,80,90,100,110,120,130,140,150];
     const yValues = [7,8,8,9,9,9,10,11,14,14,15];
     let topic=document.getElementById('chart-topic');
@@ -26,6 +27,7 @@ function qtyChart(){
 }
 
 function amountChart(){
+    document.getElementById('predict-container').innerHTML=``
     const xValues = [25,60,70,80,90,100,110,120,130,140,150];
     const yValues = [10,8,8,9,9,9,10,11,14,14,15];
     let topic=document.getElementById('chart-topic');
@@ -53,12 +55,33 @@ function amountChart(){
 }
 
 function get(){
+    
     var group1=document.getElementsByName('group1');
     group1.forEach(element => {
         if(element.checked){
-            // if(element.value==qty){
-            //     alert("hi");
-            // }
+            if(element.value=='qty'){
+                qtyChart();
+            }else if(element.value=='amount'){
+                amountChart();
+            }
         }
     });
+}
+function showContainer(){
+    document.getElementById('predict-container').innerHTML=`
+    <input type="radio" name="group1" value="qty"> 
+    <p class="p-tag">Prdeict By Qty</p>
+    <input type="radio" name="group1" value="amount"> 
+    <p class="p-tag">Prdeict By Amount</p>
+    <button type="button" class="btn-background" onclick="get()">Prdeict</button>
+    <div class="container col-12">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="small-text">Predict By last</div>
+            </div>
+            <div class="col-lg-5  text-field-container">
+                <input type="text" class="text-field small-text">
+            </div>
+        </div>
+    </div>`;
 }
