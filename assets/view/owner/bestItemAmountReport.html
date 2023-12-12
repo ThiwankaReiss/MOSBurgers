@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Best In Items By Amount</title>
+        <link rel="stylesheet" href="../../css/owner/ownerReportStyles.css">
+        <link rel="stylesheet" href="../../css/owner/ownerBackground.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="page-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1 d-sm-block"></div>
+                    <div class="col-lg-10 col-sm-12 buger-background">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-1 col-sm-1"></div>
+                                
+                                <div class="menu-container col-lg-8 col-md-10 col-sm-10">
+                                    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+                                        <a class="navbar-brand" href="#">Owner</a>
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNav">
+                                            <ul class="navbar-nav ml-auto">
+                                                <li class="nav-item nav-border nav-border-right ">
+                                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                                </li>
+                                                <li class="nav-item dropdown active">
+                                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        Customer <br>Reports
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <a class="dropdown-item" href="#">Best Customers (Qty)</a>
+                                                        <a class="dropdown-item" href="#">Best Customers (Amount)</a>
+                                                        <a class="dropdown-item" href="#">All Customers</a>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item dropdown nav-border">
+                                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        Items <br>Reports
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <a class="dropdown-item" href="#">Best Items (Qty)</a>
+                                                        <a class="dropdown-item" href="#">Best Items (Amount)</a>
+                                                        <a class="dropdown-item" href="#">All Items</a>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item nav-border">
+                                                    <a class="nav-link" href="#">Notifications</a>
+                                                </li>
+                                                <li class="nav-item dropdown nav-border">
+                                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        Manage
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <a class="dropdown-item" href="#">Customers</a>
+                                                        <a class="dropdown-item" href="#">Items</a>
+                                                        <a class="dropdown-item" href="#">Orders</a>
+                                                        <a class="dropdown-item" href="#">Cashiers</a>
+                                                        <a class="dropdown-item" href="#">Discounts</a>
+                                                        <a class="dropdown-item" href="#">SMS</a>
+                                                        <a class="dropdown-item" href="#">Sales Analysis Charts</a>
+                                                    </div>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                    <div class="container" >
+                                        <div class="row">
+                                            <div class="col-lg-8 col-md-8 col-sm-12">
+                                                <div class="container" >
+                                                    <div class="row">
+                                                        
+                                                        <div class="col-8 small-text">Best In Items By Amount</div>
+                                                        <div class="col-4">
+                                                            <button type="button" class="btn-background-1" onclick="generatePDF()">Print</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12"><p></p></div>
+                                            <div class="col-lg-10 col-md-10 col-sm-12 tbl-container scrollbar-1" id="content">
+                                                <table >
+                                                    <tr >
+                                                        <th>
+                                                            Code
+                                                        </th>
+                                                        <th>
+                                                            Name
+                                                        </th>
+                                                        <th>
+                                                            Amount    
+                                                        </th>
+                                                        <th>
+                                                            Quantity
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="tbl-row">
+                                                        <td>
+                                                            B002
+                                                        </td>
+                                                        <td>
+                                                            Burger beef
+                                                        </td>
+                                                        <td>
+                                                            5000
+                                                        </td>
+                                                        <td>
+                                                            3
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="tbl-row">
+                                                        <td>
+                                                            B001
+                                                        </td>
+                                                        <td>
+                                                            Burger chicken
+                                                        </td>
+                                                        <td>
+                                                            4000
+                                                        </td>
+                                                        <td>
+                                                            4
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                </div>
+                                <div class="col-lg-2 col-md-1 col-sm-1"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-1 d-sm-block"></div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="../../js/owner/bestItemAmountScript.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+.description-container1{
+    background-color: rgba(255, 255, 255, 0.17);
+    overflow: auto;
+    height: 100px;
+    padding-left: 15px;
+    padding-top: 3px;
+    border-radius: 25px;
+    margin-top: 20px;
+}

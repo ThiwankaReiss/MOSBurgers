@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
-        <title>Owner Home Page</title>
-        <link rel="stylesheet" href="../../css/owner/homeOwnerStyles.css">
+        <title>Cashier Notifications</title>
+        <link rel="stylesheet" href="../../css/cashier/notificationStyles.css">
         <link rel="stylesheet" href="../../css/owner/ownerBackground.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
@@ -32,7 +31,7 @@
                                                 <li class="nav-item dropdown nav-border">
                                                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
-                                                        Customer Reports
+                                                        Customer <br>Reports
                                                     </a>
                                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                         <a class="dropdown-item" href="#">Best Customers (Qty)</a>
@@ -43,7 +42,7 @@
                                                 <li class="nav-item dropdown nav-border">
                                                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
-                                                        Items Reports
+                                                        Items <br>Reports
                                                     </a>
                                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                         <a class="dropdown-item" href="#">Best Items (Qty)</a>
@@ -73,11 +72,78 @@
                                             </ul>
                                         </div>
                                     </nav>
-                                    <div class="container">
+                                    <div class="container" >
                                         <div class="row">
-                                            
+                                            <div class="col-lg-8 col-md-8 col-sm-12 description-container scrollbar-1">
+                                                <div class="container" >
+                                                    <div class="row">
+                                                        <div class="col-12 notification-text">Expired Items</div>
+                                                        <div class="col-8 small-text">Item B001 Batch-3</div>
+                                                        <div class="col-4">
+                                                            <button type="button" class="btn-background-1">Delete</button>
+                                                        </div>
+                                                        <div class="col-8 small-text">Item B002 Batch-2</div>
+                                                        <div class="col-4">
+                                                            <button type="button" class="btn-background-1">Delete</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12"><p></p></div>
+                                            <div class="col-lg-10 col-md-10 col-sm-12" id="content">
+                                                <table >
+                                                    <tr >
+                                                        <th>
+                                                            Code
+                                                        </th>
+                                                        <th>
+                                                            Name
+                                                        </th>
+                                                        <th>
+                                                            Batch
+                                                        </th>
+                                                        <th>
+                                                            Time Left To Expire
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="tbl-row">
+                                                        <td>
+                                                            B001
+                                                        </td>
+                                                        <td>
+                                                            Chichen burger
+                                                        </td>
+                                                        <td>
+                                                            6
+                                                        </td>
+                                                        <td>
+                                                            3 days
+                                                        </td>
+                                                        
+                                                    </tr>
+                                                    <tr class="tbl-row">
+                                                        <td>
+                                                            B002
+                                                        </td>
+                                                        <td>
+                                                            Chichen baritto
+                                                        </td>
+                                                        <td>
+                                                            8
+                                                        </td>
+                                                        <td>
+                                                            1 month 
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-lg-8 col-md-6 col-sm-4"></div>
+                                            <div class="col-lg-2 col-md-4 col-sm-6">
+                                                <button type="button" class="btn-background-1" onclick="generatePDF()">Print</button>
+                                            </div>
                                         </div>
-                                    </div>  
+                                    </div> 
+
                                 </div>
                                 <div class="col-lg-2 col-md-1 col-sm-1"></div>
                             </div>
@@ -88,11 +154,12 @@
                 </div>
             </div>
         </div>
-        <script src="../../js/owner/homeOwnerScript.js"></script>
+        
+        <script src="../../js/owner/ownerNotificationScript.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+        <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     </body>
 </html>
