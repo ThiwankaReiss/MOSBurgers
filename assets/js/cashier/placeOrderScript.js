@@ -69,7 +69,7 @@ window.addEventListener('click', (event) => {
     }
 });
 
-function openPage(){
+function openPlaceOrderPage2(){
      // Specify the path to the new HTML file
      var newHTMLFilePath = '../../view/cashier/placeOrderForm-2.html';
         
