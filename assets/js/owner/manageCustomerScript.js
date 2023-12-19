@@ -1,33 +1,16 @@
-class Customer{
-    constructor(customerId,name,contact,email){
-        this.customerId=customerId;
-        this.name=name;
-        this.contact=contact,
-        this.email=email;
-    }
-    getCustomerId(){
-        return this.customerId;
-    }
-    getName(){
-        return this.name;
-    }
-    getContact(){
-        return this.contact;
-    }
-    getEmail(){
-        return this.email;
-    }
-}
+let cust=localStorage.getItem('customerArray');
+let customer=JSON.parse(cust);
+let itm=localStorage.getItem('itemArray');
+let item=JSON.parse(itm);
+let odrDetail=localStorage.getItem('orderDetailArray');
+let orderDetail=JSON.parse(odrDetail);
+let odr=localStorage.getItem('orderArray');
+let order=JSON.parse(odr);
+console.log(customer);
+console.log(item);
+console.log(orderDetail);
+console.log(order);
 
-
-let customer=[new Customer('C001','Nimal','0772445070', 'Nimal*@gmail.com')
-        ,new Customer('C002','Amal','0772445071', 'Amal*@gmail.com')
-        ,new Customer('C003','Wimal','0772445072', 'Wimal*@gmail.com')
-        ,new Customer('C004','Kamal','0772445073', 'Kamal*@gmail.com')
-        ,new Customer('C005','Sumimal','0772445074', 'Sumimal*@gmail.com')
-        ,new Customer('C006','Ranmal','0772445075', 'Ranmal*@gmail.com')
-        ,new Customer('C007','Hemal','0772445076', 'Hemal*@gmail.com')
-    ];
 let tblData=`
 <tr >
     <th>
@@ -56,19 +39,19 @@ customer.forEach(element => {
     tblData+=`
 <tr>
     <td>
-        ${element.getCustomerId()}
+        ${element.customerId}
     </td>
     <td>
-        ${element.getName()}
+        ${element.name}
     </td>
     <td>
-        ${element.getContact()}
+        ${element.contact}
     </td>
     <td>
-        ${element.getEmail()}
+        ${element.email}
     </td>
     <td>
-        <button type="button" class="btn-background-1" onclick="deleteRow(this,'${element.getCustomerId()}')">Delete</button>
+        <button type="button" class="btn-background-1" onclick="deleteRow(this,'${element.customerId}')">Delete</button>
     </td>
     <td>
         <button type="button" class="btn-background-1" onclick="generatePDF()">Update</button>
@@ -85,9 +68,24 @@ function deleteRow(button, customerId) {
     
     customer.forEach(element => {
         if(element.customerId==customerId){
-            customer = customer.filter(obj => obj !== element);
+            customer.pop(element);
+        }     
+    });
+    localStorage.setItem('customerArray',JSON.stringify(customer));
+    
+    order.forEach(element => {
+        if(element.customerId==customerId){
+            orderDetail.forEach(detilOdr => {
+                if(element.orderId=detilOdr.orderDetail){
+                    detilOdr.pop();
+                }
+            });
+            order.pop(element);
         }
     });
+    localStorage.setItem('orderArray',JSON.stringify(order));
+    localStorage.setItem('orderDetailArray',JSON.stringify(orderDetail));
+
 }
 
 function print() {
@@ -111,3 +109,8 @@ function print() {
     });
 
 }
+
+localStorage.setItem('customerArray',JSON.stringify(customer));
+localStorage.setItem('itemArray',JSON.stringify(item));
+localStorage.setItem('orderArray',JSON.stringify(order));
+localStorage.setItem('orderDetailArray',JSON.stringify(orderDetail));
