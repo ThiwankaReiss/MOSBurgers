@@ -6,10 +6,6 @@ let odrDetail=localStorage.getItem('orderDetailArray');
 let orderDetail=JSON.parse(odrDetail);
 let odr=localStorage.getItem('orderArray');
 let order=JSON.parse(odr);
-console.log(customer);
-console.log(item);
-console.log(orderDetail);
-console.log(order);
 
 let tblData=`
 <tr >

@@ -69,10 +69,14 @@ function deleteRow(button, customerId) {
     let row = button.parentNode.parentNode;
     row.parentNode.removeChild(row);
     
-    orderDetail.forEach(element => {
+    order.forEach(element => {
         if(element.customerId==customerId){
-            orderDetail = orderDetail.filter(obj => obj !== element);
-            
+            orderDetail.forEach(detilOdr => {
+                if(element.orderId=detilOdr.orderDetail){
+                    detilOdr.pop();
+                }
+            });
+            order.pop(element);
         }
     });
 }
@@ -95,7 +99,7 @@ function getAmount(orderId){
 
             item.forEach(eleitm => {
                 if(eleitm.itemCode==element.code){    
-                  tot+= eleitm.price*element.qty;
+                  tot+= eleitm.price*element.qty*(100-eleitm.discount)*0.01;
                 }
             });
             
