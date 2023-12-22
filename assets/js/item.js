@@ -6,21 +6,7 @@ class Item{
         this.price=price;
         this.discount=discount;
     }
-    getItemCode(){
-        return this.itemCode;
-    }
-    getName(){
-        return this.name;
-    }
-    getPrice(){
-        return this.price;
-    }
-    getDiscount(){
-        return this.discount;
-    }
-    getQTyOnHand(){
-        return this.qtyOnHand;
-    }
+   
 }
 
 

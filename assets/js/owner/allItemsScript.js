@@ -1,12 +1,8 @@
-let cust=localStorage.getItem('customerArray');
-let customer=JSON.parse(cust);
-let itm=localStorage.getItem('itemArray');
-let item=JSON.parse(itm);
-let odrDetail=localStorage.getItem('orderDetailArray');
-let orderDetail=JSON.parse(odrDetail);
-let odr=localStorage.getItem('orderArray');
-let order=JSON.parse(odr);
-
+let customer=JSON.parse(localStorage.getItem('customerArray'));
+let item=JSON.parse(localStorage.getItem('itemArray'));
+let orderDetail=JSON.parse(localStorage.getItem('orderDetailArray'));
+let order=JSON.parse(localStorage.getItem('orderArray'));
+let cashier=JSON.parse(localStorage.getItem('cashierArray'));
 let tblData=`
 <tr >
     <th>
@@ -23,29 +19,7 @@ let tblData=`
     </th>
 </tr>
 `
-// let customerArangedTot=[];
-// customer.forEach(element => {
-//     customerArangedTot.push(getQtyPerCust(element.customerId));
-    
-// });
 
-// let customerAranged=customer;
-// for (let i = 0; i < customerArangedTot.length-1; i++) {
-//     for (let j = 0; j < customerArangedTot.length-1; j++) {
-//         if(customerArangedTot[j+1]<customerArangedTot[j]){
-//             let t=customerAranged[j];
-//             customerAranged[j]=customerAranged[j+1];
-//             customerAranged[j+1]=t;
-            
-
-//             let t1=customerArangedTot[j];
-//             customerArangedTot[j]=customerArangedTot[j+1];
-//             customerArangedTot[j+1]=t1;
-
-//         }
-//     }
-    
-// }
 item.forEach(element => {
     tblData+=`
 <tr>
@@ -117,7 +91,9 @@ function print() {
 
 }
 
+
 localStorage.setItem('customerArray',JSON.stringify(customer));
 localStorage.setItem('itemArray',JSON.stringify(item));
 localStorage.setItem('orderArray',JSON.stringify(order));
 localStorage.setItem('orderDetailArray',JSON.stringify(orderDetail));
+localStorage.setItem('cashierArray',JSON.stringify(cashier));

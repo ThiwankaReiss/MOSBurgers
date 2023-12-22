@@ -22,3 +22,9 @@ function signIn(){
     }
 }
 
+
+localStorage.setItem('customerArray',JSON.stringify(customer));
+localStorage.setItem('itemArray',JSON.stringify(item));
+localStorage.setItem('orderArray',JSON.stringify(order));
+localStorage.setItem('orderDetailArray',JSON.stringify(orderDetail));
+localStorage.setItem('cashierArray',JSON.stringify(cashier));

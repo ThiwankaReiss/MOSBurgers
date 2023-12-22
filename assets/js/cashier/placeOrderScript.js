@@ -1,5 +1,18 @@
+let customer=JSON.parse(localStorage.getItem('customerArray'));
+let item=JSON.parse(localStorage.getItem('itemArray'));
+let orderDetail=JSON.parse(localStorage.getItem('orderDetailArray'));
+let order=JSON.parse(localStorage.getItem('orderArray'));
+let cashier=JSON.parse(localStorage.getItem('cashierArray'));
+let cashierObj=JSON.parse(localStorage.getItem('cashierObj'));
 // Sample array of search suggestions
-const suggestionsArray = ["JavaScript", "HTML", "CSS", "React", "Node.js", "Python", "Java", "C++", "OpenAI", "ChatGPT"];
+
+const suggestionsArray = [];
+customer.forEach(element => {
+    suggestionsArray.push(element.customerId);
+});
+customer.forEach(element => {
+    suggestionsArray.push(element.contact);
+});
 var num=0;
 
 function showSuggestions() {
@@ -48,14 +61,28 @@ function showALlSuggestions(){
             suggestionItem.addEventListener('click', () => {
                 input.value = suggestion;
                 suggestionsContainer.style.display = 'none';
+                setValues(suggestion);
             });
-    
+            
             suggestionsContainer.appendChild(suggestionItem);
         });
         suggestionsContainer.style.display = 'block';
         
     }
     
+}
+let custId;
+function setValues(suggestion){
+    customer.forEach(element => {
+        if(element.customerId==suggestion || element.contact==suggestion){
+            document.getElementById('cashierId').innerHTML="Cashier ID : "+cashierObj;
+            document.getElementById('name').innerHTML="Name  : "+element.name;
+            document.getElementById('custId').innerHTML="Customer ID  : "+element.customerId;
+            document.getElementById('status').innerHTML="Status   : "+element.status;
+            document.getElementById('contact').innerHTML="Contact : "+element.contact;
+            custId=element.customerId;
+        }
+    });
 }
 
 // Close suggestions when clicking outside the search bar
@@ -70,12 +97,13 @@ window.addEventListener('click', (event) => {
 });
 
 function openPlaceOrderPage2(){
-     // Specify the path to the new HTML file
-     var newHTMLFilePath = '../../view/cashier/placeOrderForm-2.html';
-        
-     // Open the new HTML file in the same window
-     window.location.href = newHTMLFilePath;
-
+    localStorage.setItem('custId',JSON.stringify(custId));
+    window.location.href = 'placeOrderForm-2.html';
 
 }
-
+localStorage.setItem('customerArray',JSON.stringify(customer));
+localStorage.setItem('itemArray',JSON.stringify(item));
+localStorage.setItem('orderArray',JSON.stringify(order));
+localStorage.setItem('orderDetailArray',JSON.stringify(orderDetail));
+localStorage.setItem('cashierArray',JSON.stringify(cashier));
+localStorage.setItem('cashierObj',JSON.stringify(cashierObj));

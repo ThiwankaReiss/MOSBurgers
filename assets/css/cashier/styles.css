@@ -84,6 +84,7 @@
     outline: none;
     background-color: transparent;
     transition: border-bottom-color 0.3s;
+    color: white;
 }
 
 .text-field:focus {

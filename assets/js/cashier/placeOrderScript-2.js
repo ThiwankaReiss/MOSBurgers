@@ -1,5 +1,29 @@
+let customer=JSON.parse(localStorage.getItem('customerArray'));
+let item=JSON.parse(localStorage.getItem('itemArray'));
+let orderDetail=JSON.parse(localStorage.getItem('orderDetailArray'));
+let order=JSON.parse(localStorage.getItem('orderArray'));
+let cashier=JSON.parse(localStorage.getItem('cashierArray'));
+let cashierObj=JSON.parse(localStorage.getItem('cashierObj'));
+let custId=JSON.parse(localStorage.getItem('custId'));
 // Sample array of search suggestions
-const suggestionsArray = ["Burger1", "Burger2", "Burger3", "Taco", "Node.js", "Python", "Java", "C++", "OpenAI", "ChatGPT"];
+const suggestionsArray = [];
+item.forEach(element => {
+    suggestionsArray.push(element.name);
+});
+item.forEach(element => {
+    suggestionsArray.push(element.itemCode);
+});
+console.log(custId);
+customer.forEach(element => {
+    if(element.customerId=custId){
+        document.getElementById('cust-detail').innerHTML=element.contact+" - "+element.customerId+" - "+element.name;
+    }
+});
+
+
+
+
+
 var num=0;
 
 function showSuggestions() {
@@ -48,6 +72,7 @@ function showALlSuggestions(){
             suggestionItem.addEventListener('click', () => {
                 input.value = suggestion;
                 suggestionsContainer.style.display = 'none';
+                setValues(suggestion);
             });
     
             suggestionsContainer.appendChild(suggestionItem);
@@ -56,6 +81,20 @@ function showALlSuggestions(){
         
     }
     
+}
+
+function setValues(suggestion){
+    console.log(suggestion);
+    item.forEach(element => {
+        if(element.itemCode==suggestion || element.name==suggestion){
+            document.getElementById('itmName').value=element.name;
+            document.getElementById('code').value=element.itemCode;
+            document.getElementById('unitPrice').value=element.price;
+            
+            document.getElementById('discount').value=element.discount;
+            custId=element.customerId;
+        }
+    });
 }
 
 // Close suggestions when clicking outside the search bar
@@ -88,4 +127,9 @@ function openPlaceOrder3(){
 
 
 }
-
+localStorage.setItem('customerArray',JSON.stringify(customer));
+localStorage.setItem('itemArray',JSON.stringify(item));
+localStorage.setItem('orderArray',JSON.stringify(order));
+localStorage.setItem('orderDetailArray',JSON.stringify(orderDetail));
+localStorage.setItem('cashierArray',JSON.stringify(cashier));
+localStorage.setItem('cashierObj',JSON.stringify(cashierObj));

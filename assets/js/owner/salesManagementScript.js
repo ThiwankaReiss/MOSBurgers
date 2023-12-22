@@ -1,3 +1,9 @@
+let customer=JSON.parse(localStorage.getItem('customerArray'));
+let item=JSON.parse(localStorage.getItem('itemArray'));
+let orderDetail=JSON.parse(localStorage.getItem('orderDetailArray'));
+let order=JSON.parse(localStorage.getItem('orderArray'));
+let cashier=JSON.parse(localStorage.getItem('cashierArray'));
+
 function qtyChart(){
     document.getElementById('predict-container').innerHTML=``
     const xValues = [50,60,70,80,90,100,110,120,130,140,150];
@@ -85,3 +91,10 @@ function showContainer(){
         </div>
     </div>`;
 }
+
+
+localStorage.setItem('customerArray',JSON.stringify(customer));
+localStorage.setItem('itemArray',JSON.stringify(item));
+localStorage.setItem('orderArray',JSON.stringify(order));
+localStorage.setItem('orderDetailArray',JSON.stringify(orderDetail));
+localStorage.setItem('cashierArray',JSON.stringify(cashier));
