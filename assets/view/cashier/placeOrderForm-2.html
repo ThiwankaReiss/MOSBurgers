@@ -46,7 +46,7 @@
                                     <div class="container" >
                                         <div class="row">
 
-                                            <div class="col-12 text-label">Order ID : KOOI</div>
+                                            <div class="col-12 text-label"  id="order-id-txt">Order ID : KOOI</div>
 
                                             <div class="col-6 text-label"> Customer </div>
                                             <div class="col-6 text-label" style="text-align: right;">Cashier ID : EOOI</div>
@@ -76,10 +76,10 @@
                                                 <div class="text-label">Enter Quantity</div>
                                             </div>
                                             <div class="col-lg-2 col-md-1 col-sm-1 text-field-container">
-                                                <input type="text" class="text-field">
+                                                <input type="number" oninput="validity.valid||(value=''); calculateAmount()" id="qty" class="text-field">
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2">
-                                                <button type="button" class="btn-background">Add</button>
+                                                <button type="button" class="btn-background" onclick="addTblRow()">Add</button>
                                             </div>
 
                                             <div class="col-lg-3 col-md-4 col-sm-12">
@@ -144,85 +144,8 @@
                                             </div>
                                             <div class="col-12"></div>
                                             <div class="tbl-container scrollbar-1 col-12" >
-                                                <table >
-                                                    <tr >
-                                                        <th>
-                                                            Code
-                                                        </th>
-                                                        <th>
-                                                            Name
-                                                        </th>
-                                                        <th>
-                                                            Unit Price
-                                                        </th>
-                                                        <th>
-                                                            Qty
-                                                        </th>
-                                                        <th>
-                                                            Discount
-                                                        </th>
-                                                        <th>
-                                                            Amount
-                                                        </th>
-                                                        <th>
-                                                            Delete
-                                                        </th>
-                                                        <th>
-                                                            Update
-                                                        </th>
-                                                    </tr>
-                                                    <tr class="tbl-row">
-                                                        <td>
-                                                            B001
-                                                        </td>
-                                                        <td>
-                                                            Chichen burger
-                                                        </td>
-                                                        <td>
-                                                            1000
-                                                        </td>
-                                                        <td>
-                                                            3
-                                                        </td>
-                                                        <td>
-                                                            4%
-                                                        </td>
-                                                        <td>
-                                                            3000
-                                                        </td>
-                                                        <td>
-                                                            <button type="button" class="btn-background-1">Delete</button>
-                                                        </td>
-                                                        <td>
-                                                            <button type="button" class="btn-background-1">Update</button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="tbl-row">
-                                                        <td>
-                                                            B002
-                                                        </td>
-                                                        <td>
-                                                            Beef Burger
-                                                        </td>
-                                                        <td>
-                                                            1000
-                                                        </td>
-                                                        <td>
-                                                            4
-                                                        </td>
-                                                        <td>
-                                                            5%
-                                                        </td>
-                                                        <td>
-                                                            4000
-                                                        </td>
-                                                        <td>
-                                                            <button type="button" class="btn-background-1">Delete</button>
-                                                        </td>
-                                                        <td>
-                                                            <button type="button" class="btn-background-1">Update</button>
-                                                        </td>
-                                                    </tr>
+                                                <table id="tbl">
+                                                    
                                                 </table>
                                             </div>
                                             <div class="col-12"></div>
